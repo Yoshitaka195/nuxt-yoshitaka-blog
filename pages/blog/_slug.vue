@@ -34,14 +34,8 @@
           to="/"
           class="mr-8 self-center text-white font-bold hover:underline"
         >
-          All articles
+          投稿一覧
         </NuxtLink>
-        <a
-          href="https://nuxtjs.org/blog/creating-blog-with-nuxt-content"
-          class="mr-8 self-center text-white font-bold hover:underline"
-        >
-          Tutorial
-        </a>
         <AppSearchInput />
       </div>
     </div>
@@ -50,7 +44,7 @@
     >
       <h1 class="font-bold text-4xl">{{ article.title }}</h1>
       <p>{{ article.description }}</p>
-      <p class="pb-4">Post last updated: {{ formatDate(article.updatedAt) }}</p>
+      <p class="pb-4">最終更新日: {{ formatDate(article.updatedAt) }}</p>
       <!-- table of contents -->
       <nav class="pb-6">
         <ul>
@@ -106,7 +100,7 @@ export default {
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
+      return new Date(date).toLocaleDateString('ja', options)
     }
   }
 }

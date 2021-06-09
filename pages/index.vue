@@ -2,7 +2,7 @@
   <div class="m-8">
     <TheHeader />
 
-    <h1 class="font-bold text-4xl">Blog Posts</h1>
+    <h1 class="font-bold text-4xl">投稿一覧</h1>
     <ul class="flex flex-wrap">
       <li
         v-for="article of articles"
@@ -15,7 +15,7 @@
         >
           <img
             v-if="article.img"
-            class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
+            class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover rounded-lg"
             :src="article.img"
           />
 
